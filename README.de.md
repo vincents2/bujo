@@ -13,7 +13,7 @@ _Read this in other languages: [English](README.md), [Deutsch](README.de.md)._
 ### Installation
 - [Python](https://www.python.org/downloads/) installieren
 - [pip](https://pypi.org/project/pip/) (Package Installer for Python) installieren
-  - [get-pip.py](https://bootstrap.pypa.io/get-pip.py) downloaden. (e.g. rightclick, 'Save as...')
+  - [get-pip.py](https://bootstrap.pypa.io/get-pip.py) herunterladen. (z.B. Rechtsklick, 'Speichern unter...')
   - Im selben Ordner wie get-pip.py: `python get-pip.py` ausführen
 - Dependencies installieren
   - Im _backend_ Ordner: `pip install flask` ausführen
@@ -33,4 +33,4 @@ Im _backend_ Ordner: `python app.py` ausführen
 - MySQL Workbench öffnen
 - 'Local instance MySQL80' unter 'MySQL Connections' öffnen
 - Zu 'Startup / Shutdown' navigieren
-- 'Start Server' klicken
+- "Server starten" klicken
