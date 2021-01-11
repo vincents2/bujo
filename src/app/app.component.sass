@@ -1,0 +1,28 @@
+@import "../styles"
+
+.container-fluid
+    height: 100vh
+
+    position: relative
+
+    .bar
+        height: $topbar-height
+
+        background-color: $foreground
+        box-shadow: $shadow2
+
+    .content
+        width: 100%
+        top: $topbar-height
+        bottom: 0
+        margin: 0
+        padding: $spacing
+
+        position: absolute
+
+        .element
+            margin: $spacing
+            padding: 0.5*$spacing
+
+            background-color: $element
+            box-shadow: $shadow1

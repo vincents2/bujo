@@ -1,0 +1,55 @@
+
+<div
+    [ngSwitch]="scope"
+    class="content"
+    >
+    <app-dayview *ngSwitchCase="1"></app-dayview> <!-- 'Scope.Day' statt '1' funktioniert leider nicht -->
+    <app-weekview
+        *ngSwitchCase="2"
+        [eventItems]="eventItems"
+        (spanIdChanged)="changeSpanId($event);"
+        ></app-weekview>
+    <monthview *ngSwitchCase="3"></monthview>
+    <app-yearview *ngSwitchCase="4"></app-yearview>
+</div>
+
+<ul class="nav nav-pills nav-fill">
+    <li class="no-select nav-item">
+        <a
+            href="#"
+            onclick="return false;"
+            class="nav-link"
+            [class.active]="scope == 1"
+            (click)="changeScope(1);"
+            >Day</a>
+    </li>
+    <li class="no-select nav-item">
+        <a
+            href="#"
+            onclick="return false;"
+            class="nav-link"
+            [class.active]="scope == 2"
+            (click)="changeScope(2);"
+            >Week</a>
+    </li>
+    <li class="no-select nav-item">
+        <a
+            href="#"
+            onclick="return false;"
+            class="nav-link"
+            [class.active]="scope == 3"
+            (click)="changeScope(3);"
+            >Month</a>
+    </li>
+    <li class="no-select nav-item">
+        <a
+            href="#"
+            onclick="return false;"
+            class="nav-link"
+            [class.active]="scope == 4"
+            (click)="changeScope(4);"
+            >Year</a>
+    </li>
+</ul>
+
+<!-- <button style="position: absolute; bottom: 100px; left: 100px;" (click)="debug();">Debug View</button> -->

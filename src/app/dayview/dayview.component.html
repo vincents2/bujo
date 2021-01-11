@@ -1,0 +1,26 @@
+<div class="content">
+    <table class="table table-responsive-xl table-bordered">
+        <thead>
+            <tr> 
+                <th scope="col">Time</th>
+                <th scope="col">Mon , {{ spanIdDate.getDate() }}.{{ spanIdDate.getMonth() }}.</th>
+                </tr>
+
+        </thead>
+        <tbody>
+            <tr *ngFor="let time of times" class="element">
+                <td
+                    scope="row"
+                    class="time-col"
+                    >
+                    {{ time.hours | number:'2.0' }}:{{ time.minutes | number:'2.0' }}
+                </td>
+                <td
+                    
+                    (click)="tdClicked(time);"
+                    ></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+

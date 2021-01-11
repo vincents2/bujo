@@ -1,0 +1,89 @@
+@import "../../styles"
+
+.page-content
+    /* Firefox */
+    height: -moz-calc(100vh - 80px - 10px*5.5 - 34px)
+    /* WebKit */
+    height: -webkit-calc(100vh - 80px - 10px*5.5 - 34px)
+    /* Opera */
+    height: -o-calc(100vh - 80px - 10px*5.5 - 34px)
+    /* Standard */
+    height: calc(100vh - 80px - 10px*5.5 - 34px)
+    padding: 0 $spacing 0 0
+
+    overflow: auto
+    
+    .grid-container
+        display: grid
+        grid-template-columns: 80px auto
+        grid-template-rows: auto
+        gap: 0 0
+        grid-template-areas: ". ."
+
+        .time-col
+            position: relative
+
+            >table
+                position: absolute
+                bottom: 39px
+                margin: 0 0 0 0
+
+                >tbody>tr
+                    line-height: 2px
+
+                    >td
+                        border-bottom: 1px solid $element // damit felder genauso hoch sind wie felder in content-col
+                        text-align: right
+                        color: $sec-font-color
+
+        .content-col
+
+            >.cal-container
+                position: relative
+
+                >table
+                    margin: 0 0 0 0
+
+                    // table-layout: fixed
+                    border-spacing: 10px
+
+                    >thead>tr>th
+                        border-bottom: 1px solid $cal-line-color2
+                
+                    >tbody>tr
+                        line-height: 0
+                        
+                        >td
+                            min-width: 70px // 64px?
+                            
+                            border-bottom: 1px solid $cal-line-color2
+                            
+                            &:hover
+                                background-color: $hover-color
+                                // cursor: crosshair
+
+                            >div
+                                margin: 0
+                                padding: 0
+                                border-bottom: 1px solid $cal-line-color1
+                                
+                        .first-row
+                            padding: 0
+
+                .cal-event
+                    position: absolute
+                    
+                    top: calc(0.5px + 100% / 24 * 15)
+                    left: 6px
+                    width: calc(100% / 7 - 12px)
+                    height: calc(100% / 24 * 1.25)
+                    padding: 0 3px
+
+                    background-color: $cal-event
+                    font-size: 13px
+                    overflow-y: scroll
+                    // .cal-font
+                    //     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+
+::-webkit-scrollbar
+    width: 0

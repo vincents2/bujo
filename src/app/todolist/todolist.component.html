@@ -1,0 +1,55 @@
+
+<div class="list-group">
+    <div *ngFor="let item of todoItems">
+        <a
+            *ngIf="item.scope === scope && item.spanId === spanId"
+            href="#"
+            onclick="return false;"
+            class="list-group-item list-group-item-action flex-column align-items-start"
+            (click)="itemClicked(item);"
+            >
+            <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">
+                    <i
+                        *ngIf="!item.done"
+                        class="bi-circle"
+                        (click)="toggleDone(item);"
+                        ></i>
+                    <i
+                        *ngIf="item.done"
+                        class="bi-check-circle"
+                        (click)="toggleDone(item);  "
+                        ></i>
+                        {{ item.title }}
+                </h5>
+                <small>
+                    <i
+                        *ngIf="item.goalId != null"
+                        title="{{ item.goalTitle }}"
+                        class="bi-link"
+                    ></i>
+                </small>
+            </div>
+            <p
+                *ngIf="item.description"
+                class="mb-1"
+                >
+                {{ item.description }}
+            </p>
+        </a>
+    </div>
+    <a
+        href="#"
+        onclick="return false;"
+        class="list-group-item list-group-item-action flex-column align-items-start"
+        (click)="addItemClicked();"
+        >
+        <div class="d-flex w-100 align-content-between">
+            <h5 class="mb-1">
+                <i class="bi-plus"></i>
+            </h5>
+        </div>
+    </a>
+</div>
+
+<!-- <button (click)="debug();">Debug Todolist</button> -->

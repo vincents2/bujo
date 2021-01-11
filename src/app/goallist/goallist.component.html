@@ -1,0 +1,13 @@
+<div class="mx-auto" style="width: 200px;">
+<div class="card" style="width: 200px ;"> 
+<h2>{{goals.length}} Goals</h2>
+<ul>
+   
+    <li *ngFor="let goals of goals; index as i">
+        {{i}}-{{goals}}
+    </li>
+</ul>
+<button (click)="Add()">Add Goal</button>
+<input  [(ngModel)]="goalname" (keyup.enter)="onKeyUp()" />
+</div>
+</div>

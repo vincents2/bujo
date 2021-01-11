@@ -1,0 +1,10 @@
+<h1>Goal Formular</h1>
+<form #GoalFormular="ngForm" (ngSumit)="getValues(GoalFormular.value)"> 
+<input type="text" ngModel name="id" placeholder="id?">
+<br><br>
+<input type="text" ngModel name="titel" placeholder="Goalname?">
+<br><br>
+<input type="text" ngModel name="id" placeholder="id?">
+<br><br>
+<button (click)="getValues(GoalFormular.value)">Get Values</button>
+</form>

@@ -1,0 +1,50 @@
+
+<div class="nav nav-tabs nav-fill">
+    <div class="no-select nav-item">
+        <a
+            href="#"
+            onclick="return false;"
+            title="{{ dailyaimItems.length }} item{{ dailyaimItems.length > 1 ? 's' : '' }}"
+            class="nav-link"
+            [class.active]="selection === 1"
+            (click)="selection = 1;"
+            >Daily Aims</a>
+    </div>
+    <div class="no-select nav-item">
+        <a
+            href="#"
+            onclick="return false;"
+            title="{{ goalItems.length }} item{{ goalItems.length > 1 ? 's' : '' }}"
+            class="nav-link"
+            [class.active]="selection === 2"
+            (click)="selection = 2;"
+            >Goals</a>
+    </div>
+    <div class="no-select nav-item">
+        <a
+            href="#"
+            onclick="return false;"
+            title="{{ todoItems.length }} item{{ todoItems.length > 1 ? 's' : '' }}"
+            class="nav-link"
+            [class.active]="selection === 3"
+            (click)="selection = 3;"
+            >Todos</a>
+    </div>
+</div>
+
+<div
+    [ngSwitch]="selection"
+    class="content"
+    >
+    <app-dailyaimlist *ngSwitchCase="1"></app-dailyaimlist>
+    <app-goallist *ngSwitchCase="2"></app-goallist>
+    <app-todolist
+        *ngSwitchCase="3"
+        [scope]="scope"
+        [spanId]="spanId"
+        [todoItems]="todoItems"
+        (requireSync)="syncTodoItem($event);"
+        ></app-todolist>
+</div>
+
+<!-- <button style="position: absolute; bottom: 100px; left: 100px;" (click)="debug();">Debug Sidebar</button> -->

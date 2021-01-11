@@ -1,0 +1,56 @@
+
+<div class="page-content">
+    <div class="grid-container">
+
+        <div class="time-col">
+            <table class="table table-borderless">
+                <tbody>
+                    <tr *ngFor="let time of times">
+                        <td>
+                            <div *ngIf="time">
+                                {{ time.hours | number:'1.0' }}:{{ time.minutes | number:'2.0' }}
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="content-col">
+            <table class="table table-borderless">
+                <thead>
+                    <tr>
+                        <th *ngFor="let day of days">
+                           {{ day.weekday }}, {{ day.date.getDate() }}.{{ day.date.getMonth() }}.
+                        </th>
+                    </tr>
+                </thead>
+            </table>
+            <div class="cal-container">
+                <table class="table table-borderless">
+                    <tbody>
+                        <tr *ngFor="let i of [].constructor(times.length + 3); index as j">
+                            <td
+                               *ngFor="let k of [].constructor(days.length)"
+                               [style.width.%]="100/days.length"
+                               [class.first-row]="j === 0"
+                               >
+                               <div></div>
+                           </td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="cal-event">
+                    <p class="cal-font">
+                        Besprechung (Beispiel-Event)
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- <button style="position: absolute; top: 100px; left: 100px;" (click)="debug();">Debug Todolist</button>
+<button style="position: absolute; top: 140px; left: 100px;" (click)="changeSpanId();">Change spanId</button> -->

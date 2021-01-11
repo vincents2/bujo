@@ -1,0 +1,32 @@
+
+<div class="clear container-fluid">
+
+    <div class="bar">
+        <app-topbar></app-topbar>
+    </div>
+
+    <div class="content row">
+        <div class="clear col-md-3">
+            <div class="element">
+                <app-sidebar
+                    [scope]="scope"
+                    [spanId]="spanId"
+                    ></app-sidebar>
+            </div>
+        </div>
+        <div class="clear col-md-7">
+            <div class="element">
+                <app-view
+                    (scopeChanged)="changeScope($event);"
+                    (spanIdChanged)="changeSpanId($event);"
+                    ></app-view>
+            </div>
+        </div>
+        <div class="clear col-xl-2">
+            <div class="element">
+                <app-eventbar></app-eventbar>
+            </div>
+        </div>
+    </div>
+
+</div>
