@@ -4,7 +4,7 @@ Cross-system web application for time management including a digital bullet jour
 _Read this in other languages: [English](README.md), [Deutsch](README.de.md)._
 ## Frontend
 ### Installation
-- Install [Node.js](https:/d/nodejs.org/en/download/)
+- Install [Node.js](https://nodejs.org/en/download/)
 - Install Angular CLI using `npm install -g @angular/cli`
 - Install dependencies using `npm install`
 ### Starting the Server
