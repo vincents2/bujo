@@ -4,7 +4,7 @@ Systemübergreifende Webanwendung zum Zeitmanagement mit digitaler Bullet-Journa
 _Read this in other languages: [English](README.md), [Deutsch](README.de.md)._
 ## Frontend
 ### Installation
-- [Node.js](https:/d/nodejs.org/en/download/) installieren
+- [Node.js](https://nodejs.org/en/download/) installieren
 - Angular CLI installieren mit `npm install -g @angular/cli`
 - Dependencies installieren mit `npm install`
 ### Server starten
