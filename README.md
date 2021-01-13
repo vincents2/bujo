@@ -34,3 +34,7 @@ In the _backend_ folder, run `python app.py`
 - Open 'Local instance MySQL80' under 'MySQL Connections'
 - Navigate to 'Startup / Shutdown'
 - Click 'Start Server'
+## VS Code Extensions
+- [Angular Language Service](https://marketplace.visualstudio.com/items?itemName=Angular.ng-template)
+- [Sass](https://marketplace.visualstudio.com/items?itemName=Syler.sass-indented)
+- [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
